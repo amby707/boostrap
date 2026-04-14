@@ -1,4 +1,5 @@
-const API_URL='http://localhost:3000/api/tasks/';
+const API_URL='http://boostrap-production.up.railway.app';
+fetch(`${API_URL}/tasks`)
 
 //CORS (Cross-Origin Resource Sharing)
 
