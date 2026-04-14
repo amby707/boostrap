@@ -34,9 +34,12 @@ const renderTasks=() => { //function renderTasks() {: funciona de la misma maner
         const row=document.createElement('tr');
         row.innerHTML=`
             <td>${task.id}</td>
-            <td>${task.task}</td>
+            <td>${task.title}</td>
             <td>${task.priority}</td>
             <td>${task.isCompleted ? 'Yes' : 'No'}</td>
+            <td>
+                <button class="btn btn-sm btn-danger" onclick="deleteTask(${task.id})">Delete</button>
+            </td>
         `;
         tasksListElement.appendChild(row);
     });
