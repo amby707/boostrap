@@ -33,7 +33,7 @@ const renderTasks=() => { //function renderTasks() {: funciona de la misma maner
     toDoList.forEach(task => {
         const row=document.createElement('tr');
         row.innerHTML=`
-            <td>${task.ID}</td>
+            <td>${task.id}</td>
             <td>${task.task}</td>
             <td>${task.priority}</td>
             <td>${task.isCompleted ? 'Yes' : 'No'}</td>
