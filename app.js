@@ -34,9 +34,9 @@ const renderTasks=() => { //function renderTasks() {: funciona de la misma maner
         const row=document.createElement('tr');
         row.innerHTML=`
             <td>${task.ID}</td>
-            <td>${task.Task}</td>
-            <td>${task.Priority}</td>
-            <td>${task.IsCompleted ? 'Yes' : 'No'}</td>
+            <td>${task.task}</td>
+            <td>${task.priority}</td>
+            <td>${task.isCompleted ? 'Yes' : 'No'}</td>
         `;
         tasksListElement.appendChild(row);
     });
