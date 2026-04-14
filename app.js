@@ -1,5 +1,13 @@
-const API_URL='https://boostrap-production.up.railway.app';
-fetch(`${API_URL}/tasks`)
+const API_URL='https://boostrap-production.up.railway.app/api/tasks/';
+fetch("https://boostrap-production.up.railway.app/tasks", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({
+    title: "Nueva tarea"
+  })
+});
 
 //CORS (Cross-Origin Resource Sharing)
 
