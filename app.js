@@ -40,6 +40,9 @@ const renderTasks=() => { //function renderTasks() {: funciona de la misma maner
             <td>
                 <button class="btn btn-sm btn-danger" onclick="deleteTask(${task.id})">Delete</button>
             </td>
+            <td>
+                <button class="btn btn-sm btn-primary" onclick="editTask(${task.id})">Edit</button>
+            </td>
         `;
         tasksListElement.appendChild(row);
     });
