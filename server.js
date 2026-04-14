@@ -5,12 +5,7 @@ const cors = require('cors');
 const app = express();
 
 //Middlewares -Decirle que autorice las piliticas del dominio
-app.use(cors(
-    {
-        origin: 'http://localhost',
-        credentials:true
-    }
-));
+app.use(cors());
 
 app.use(express.json());
 
