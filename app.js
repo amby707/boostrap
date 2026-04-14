@@ -70,6 +70,41 @@ taskForm.addEventListener('submit', async (event) => {
     }
 });
 
+async function deleteTask(id) {
+  try {
+    await fetch(`https://boostrap-production.up.railway.app/api/tasks/${id}`, {
+      method: "DELETE"
+    });
+
+    location.reload();
+  } catch (error) {
+    console.error("Error deleting task:", error);
+  }
+}
+
+async function editTask(id) {
+  const newTitle = prompt("Nuevo título:");
+  const newPriority = prompt("Nueva prioridad (low, medium, high):");
+
+  try {
+    await fetch(`https://boostrap-production.up.railway.app/api/tasks/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        title: newTitle,
+        priority: newPriority,
+        isCompleted: false
+      })
+    });
+
+    location.reload();
+  } catch (error) {
+    console.error("Error updating task:", error);
+  }
+}
+
 //Llamar fetch function
 fetchTasks();
 
