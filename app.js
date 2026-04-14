@@ -1,4 +1,4 @@
-const API_URL='http://boostrap-production.up.railway.app';
+const API_URL='https://boostrap-production.up.railway.app';
 fetch(`${API_URL}/tasks`)
 
 //CORS (Cross-Origin Resource Sharing)
